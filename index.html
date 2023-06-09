@@ -1,0 +1,42 @@
+return (
+    <div className="App">
+        <table className="table table-bordered" >
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Idade</th>
+            <th>Operação</th>
+          </tr>
+        </thead>
+        <tbody>
+
+
+        {data.map(aluno=>(
+            <tr key={aluno.id}>
+              <td>{aluno.id}</td>
+              <td>{aluno.nome}</td>
+              <td>{aluno.email}</td>
+              <td>{aluno.idade}</td>
+              </tr>
+          ))}
+
+
+        </tbody>
+      </table>
+    </div>
+  );
+
+  {data.map(aluno=>(
+    <tr key={aluno.id}>
+     <td>{aluno.id}</td>
+     <td>{aluno.nome}</td>
+     <td>{aluno.email}</td>
+     <td>{aluno.idade}</td>
+        <td>
+           <button className="btn btn-primary">Editar</button> {" "}
+           <button className="btn btn-danger">Excluir</button>
+         </td>
+     </tr>
+     ))}
